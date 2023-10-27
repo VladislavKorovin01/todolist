@@ -14,7 +14,7 @@ function TodoInputForm({Add}){
         <input 
           value={todo.text}
           type="text"
-          onChange={(e)=>setTodo({...todo, text: e.target.value})}
+          onChange={(e)=>setTodo({...todo,id: Date.now(), dateAdd:Date.now(), text: e.target.value})}
         />
         <button onClick={(e)=>AddNewTodo(e)}>Add</button>
       </form>

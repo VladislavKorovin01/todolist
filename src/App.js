@@ -7,13 +7,14 @@ import Header from './components/Header';
 function App() {
   const[todolist, setTodolist]=useState([]);
 
+
   function Add(todo){
     setTodolist([...todolist,todo]);
-    console.log(todolist);
+    // console.log(todolist);
   }
 
   function Delete(id){
-    setTodolist(todolist.filter((t)=>t.id===id));
+    setTodolist(todolist.filter((t)=>t.id!==id));
   }
 
   return (
