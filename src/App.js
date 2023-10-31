@@ -7,7 +7,6 @@ import Header from './components/Header';
 function App() {
 
   const data = JSON.parse(localStorage.getItem('todolist'));
-  // const data =null;
   const[todolist, setTodolist]=useState( data ? data : []);
 
   useEffect(()=>{localStorage.setItem('todolist', JSON.stringify(todolist));},[todolist])
@@ -20,12 +19,24 @@ function App() {
     setTodolist(todolist.filter((t)=>t.id!==id));
   }
 
+  function ChangeComplete(todo){
+
+    const myArr = todolist.slice(0);
+    myArr.map((t)=>{
+        if(t.id===todo.id){
+          t.isComplete = !t.isComplete
+        };
+      }) 
+      setTodolist(myArr);
+      console.log(todolist);
+    }
+
   return (
     <div className="App">
       <Header/>
       <div className='container'>
         <TodoInputForm Add={Add}/>
-        <TodoList todolist={todolist} Delete={Delete}/>
+        <TodoList todolist={todolist} Delete={Delete} ChangeComplete={ChangeComplete}/>
       </div>
     </div>
   );
