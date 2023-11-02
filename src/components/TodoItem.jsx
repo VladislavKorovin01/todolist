@@ -1,14 +1,22 @@
 import React from "react";
+import { MyButton } from "./UI/MyButton/MyButton";
 
-function TodoItem({todo,index,Delete}){
+function TodoItem({todo,index,Delete,ChangeStatus}){
     return(
         <div className="todoItem">
-            <div>
-                {index}{todo.text}{todo.isComplete}
+            <div className="indextext">
+                <div className="indexItem">
+                    {index}
+                </div>
+                <div className="texttodo">
+                    {todo.text}
+                </div>
             </div>
+
             <div>
-                <button>Edit</button>
-                <button onClick={()=>Delete(todo.id)}>Delete</button>
+                <MyButton>Edit</MyButton>
+                <MyButton onClick={()=>Delete(todo.id)}>Delete</MyButton>
+                <input type="checkbox" onChange={()=>ChangeStatus(todo)}/>
             </div>
         </div>
     );

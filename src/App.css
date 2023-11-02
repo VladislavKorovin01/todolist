@@ -29,5 +29,34 @@ margin: auto;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  min-width: 300px;
+  min-width: 200px;
+  border: 2px solid rgb(15, 4, 38);
+  border-radius: 30px;
+  padding: 20px;
+  margin-top:10px;
+
+}
+
+.indexItem{
+  color: aliceblue;
+  background-color: rgb(15, 4, 38);
+  border-radius: 50%;
+  width:30px;
+  height: 30px;
+  flex-basis: 30px;
+}
+
+.indextext{
+  display: flex;
+  flex-direction: row;
+}
+
+.indextext :last-child{
+  margin-left: 20px;
+  display: flex;
+}
+
+.texttodo{
+  background-color: aqua;
+  overflow: hidden;
 }
