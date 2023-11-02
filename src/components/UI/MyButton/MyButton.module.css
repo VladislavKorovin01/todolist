@@ -1,0 +1,12 @@
+.myButton{
+    padding: 10px 20px;
+    color: aliceblue;
+    background-color: rgb(15, 4, 38);
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.myButton:hover{
+cursor: pointer;
+}
