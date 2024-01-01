@@ -1,7 +1,6 @@
 import React from "react";
-import { MyButton } from "./UI/MyButton/MyButton";
 
-function TodoItem({todo,index,Delete,ChangeStatus}){
+function TodoItem({todo,index,Delete}){
     return(
         <div className="todoItem">
             <div className="indextext">
@@ -14,9 +13,8 @@ function TodoItem({todo,index,Delete,ChangeStatus}){
             </div>
 
             <div>
-                <MyButton>Edit</MyButton>
-                <MyButton onClick={()=>Delete(todo.id)}>Delete</MyButton>
-                <input type="checkbox" onChange={()=>ChangeStatus(todo)}/>
+                <button>Edit</button>
+                <button onClick={()=>Delete(todo.id)}>Delete</button>
             </div>
         </div>
     );
